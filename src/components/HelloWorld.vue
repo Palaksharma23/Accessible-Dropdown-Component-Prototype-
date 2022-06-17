@@ -73,28 +73,23 @@ export default {
         startkey.focus();
       }
     },
-    focusPrevious(isArrowKey) {
+    focusPrevious() {
       if (this.focusedIndex == 0) {
         this.focusedIndex = 2;
       } else {
         this.focusedIndex = this.focusedIndex - 1;
       }
-      // console.log(this.focusedIndex);
-      if (isArrowKey) {
-        this.focusItem();
-      }
+      // console.log(this.focusedIndex); 
+        this.focusItem(); 
     },
-    focusNext(isArrowKey) {
+    focusNext() {
       if (this.focusedIndex == 2) {
         this.focusedIndex = 0;
       } else {
         this.focusedIndex = this.focusedIndex + 1;
       }
-      // console.log(this.focusedIndex);
-
-      if (isArrowKey) {
-        this.focusItem();
-      }
+      // console.log(this.focusedIndex); 
+        this.focusItem(); 
     },
     focusItem() {
       const focuseditem = this.$refs.dropdown.children[this.focusedIndex];
@@ -109,8 +104,7 @@ export default {
 };
 </script>
 
-<style>
-/* Style The Dropdown Button */
+<style> 
 .dropbtn {
   background-color: #d0afff;
   color: white;
@@ -118,16 +112,12 @@ export default {
   font-size: 16px;
   border: none;
   cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
+} 
 .dropdown {
   background-color: #d0afff;
   position: relative;
   display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
+} 
 .dropdown-content {
   display: none;
   position: absolute;
@@ -136,8 +126,7 @@ export default {
   box-shadow: 0px 8px 16px 0px #d0afff;
   z-index: 1;
 }
-
-/* Links inside the dropdown */
+ 
 a {
   color: 	black;
   padding: 12px 16px;
@@ -152,19 +141,13 @@ a:focus {
   text-decoration: none;
   display: block;
   background-color: #ffa32d;
-}
-
-/* Change color of dropdown links on hover */
+} 
 a:hover {
   background-color: white;
-}
-
-/* Show the dropdown menu on hover */
+} 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
+} 
 .dropdown:hover .dropbtn {
   background-color: #ffa32d;
 }
